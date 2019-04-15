@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Model"
+  Version="11.1.1.66.73"
+  SeparateXMLFiles="true"
+  PackageName="com.ly.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../Model.jpr"/>
+    <Attr Name="_NamedConnection" Value="student_manager"/>
+    <Attr Name="_appModuleNames0" Value="com.ly.model.am.StudentAdminAM"/>
+  </DesignTime>
+  <Containee
+    Name="am"
+    PackageName="com.ly.model.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="eo"
+    PackageName="com.ly.model.eo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="lov"
+    PackageName="com.ly.model.vo.lov"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="vo"
+    PackageName="com.ly.model.vo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

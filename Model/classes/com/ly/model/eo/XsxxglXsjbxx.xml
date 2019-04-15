@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XsxxglXsjbxx"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="XSXXGL_XSJBXX"
+  AliasName="XsxxglXsjbxx"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  RowClass="com.ly.model.eo.XsxxglXsjbxxImpl"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access"/>
+    <AttrArray Name="_publishEvents"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="Xsid"
+    IsNotNull="true"
+    Precision="12"
+    ColumnName="XSID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="12"/>
+    </DesignTime>
+    <validation:MethodValidationBean
+      Name="Xsid_Rule_0"
+      MethodName="validateXsid"
+      ResId="com.ly.model.eo.XsxxglXsjbxx.Xsid_Rule_0"/>
+  </Attribute>
+  <Attribute
+    Name="Bjdm"
+    IsNotNull="true"
+    Precision="20"
+    ColumnName="BJDM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Zzmm"
+    Precision="60"
+    ColumnName="ZZMM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Byzxdq"
+    Precision="200"
+    ColumnName="BYZXDQ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Bdzy"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="BDZY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Kl"
+    Precision="200"
+    ColumnName="KL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Syd"
+    Precision="200"
+    ColumnName="SYD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Jg"
+    Precision="200"
+    ColumnName="JG"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Hkszd"
+    Precision="200"
+    ColumnName="HKSZD"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Mz"
+    Precision="20"
+    ColumnName="MZ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Lqzy"
+    IsNotNull="true"
+    Precision="200"
+    ColumnName="LQZY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ksh"
+    Precision="15"
+    ColumnName="KSH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xm"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="XM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xmpy"
+    Precision="20"
+    ColumnName="XMPY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Cym"
+    Precision="32"
+    ColumnName="CYM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="32"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xb"
+    IsNotNull="true"
+    Precision="4"
+    ColumnName="XB"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Sfzh"
+    Precision="20"
+    ColumnName="SFZH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Ykt"
+    Precision="20"
+    ColumnName="YKT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Mm"
+    Precision="100"
+    ColumnName="MM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Csrq"
+    Precision="20"
+    ColumnName="CSRQ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xx"
+    Precision="2"
+    ColumnName="XX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Nf"
+    Precision="4"
+    ColumnName="NF"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="4"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Zslb"
+    Precision="20"
+    ColumnName="ZSLB"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xppath"
+    Precision="128"
+    ColumnName="XPPATH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="128"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Sfyj"
+    Precision="20"
+    ColumnName="SFYJ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Kslb"
+    Precision="100"
+    ColumnName="KSLB"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Hkxz"
+    Precision="20"
+    ColumnName="HKXZ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Sfhp"
+    Precision="10"
+    ColumnName="SFHP"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Byzx"
+    Precision="128"
+    ColumnName="BYZX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="128"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Lxdh"
+    Precision="50"
+    ColumnName="LXDH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Jtdh"
+    Precision="30"
+    ColumnName="JTDH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Jtdz"
+    Precision="500"
+    ColumnName="JTDZ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Yzbm"
+    Precision="6"
+    ColumnName="YZBM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="6"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Dzyx"
+    Precision="128"
+    ColumnName="DZYX"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="128"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Jkzk"
+    Precision="256"
+    ColumnName="JKZK"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="256"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Fzjl"
+    Precision="256"
+    ColumnName="FZJL"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="256"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Bkyy"
+    Precision="20"
+    ColumnName="BKYY"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Rxsj"
+    Precision="10"
+    ColumnName="RXSJ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Bysj"
+    Precision="10"
+    ColumnName="BYSJ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xh"
+    Precision="11"
+    ColumnName="XH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="11"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Bj"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="BJ"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+    <validation:ListValidationBean
+      Name="Bj_Rule_0"
+      OnAttribute="Bj"
+      OperandType="JBO"
+      Inverse="false"
+      ListValue="com.ly.model.vo.lov.ListVO.Num"
+      ResId="com.ly.model.eo.XsxxglXsjbxx.Bj_Rule_1"/>
+  </Attribute>
+  <Attribute
+    Name="Cjsj"
+    ColumnName="CJSJ"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xgsj"
+    ColumnName="XGSJ"
+    SQLType="TIMESTAMP"
+    Type="oracle.jbo.domain.Date"
+    ColumnType="DATE"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="7"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xydm"
+    Precision="20"
+    ColumnName="XYDM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xqdm"
+    Precision="20"
+    ColumnName="XQDM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Fdyxm"
+    Precision="60"
+    ColumnName="FDYXM"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Fdygh"
+    Precision="60"
+    ColumnName="FDYGH"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="60"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Xjzt"
+    Precision="20"
+    ColumnName="XJZT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Zszt"
+    Precision="20"
+    ColumnName="ZSZT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="20"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Sfydr"
+    Precision="2"
+    ColumnName="SFYDR"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Sfytb"
+    Precision="2"
+    ColumnName="SFYTB"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="XSXXGL_XSJBXX">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="PkXsxxglXsjbxx"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PK_XSXXGL_XSJBXX"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Xsid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0016019">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0016019"/>
+      <Attr Name="_checkCondition" Value='"XSID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Xsid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0016020">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0016020"/>
+      <Attr Name="_checkCondition" Value='"BJDM" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Bjdm"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0016021">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0016021"/>
+      <Attr Name="_checkCondition" Value='"BDZY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Bdzy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0016022">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0016022"/>
+      <Attr Name="_checkCondition" Value='"LQZY" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Lqzy"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0016023">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0016023"/>
+      <Attr Name="_checkCondition" Value='"XM" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Xm"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0016024">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0016024"/>
+      <Attr Name="_checkCondition" Value='"XB" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.ly.model.eo.XsxxglXsjbxx.Xb"/>
+    </AttrArray>
+  </Key>
+  <ResourceBundle>
+    <PropertiesBundle
+      PropertiesFile="com.ly.model.ModelBundle"/>
+  </ResourceBundle>
+</Entity>

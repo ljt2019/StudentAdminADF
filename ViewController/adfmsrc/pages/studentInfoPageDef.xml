@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="studentInfoPageDef" Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="XsxxglXsjbxxView1" RangeSize="25"
+              DataControl="StudentAdminAMDataControl"
+              id="XsxxglXsjbxxView1Iterator"/>
+    <searchRegion Criteria="XsxxglXsjbxxViewCriteria"
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="XsxxglXsjbxxView1Iterator"
+                  id="XsxxglXsjbxxViewCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="XsxxglXsjbxxView1Iterator" id="XsxxglXsjbxxView1">
+      <nodeDefinition DefName="com.ly.model.vo.XsxxglXsjbxxView"
+                      Name="XsxxglXsjbxxView10">
+        <AttrNames>
+          <Item Value="Xsid"/>
+          <Item Value="Bjdm"/>
+          <Item Value="Zzmm"/>
+          <Item Value="Byzxdq"/>
+          <Item Value="Bdzy"/>
+          <Item Value="Kl"/>
+          <Item Value="Syd"/>
+          <Item Value="Jg"/>
+          <Item Value="Hkszd"/>
+          <Item Value="Mz"/>
+          <Item Value="Lqzy"/>
+          <Item Value="Ksh"/>
+          <Item Value="Xm"/>
+          <Item Value="Xmpy"/>
+          <Item Value="Cym"/>
+          <Item Value="Xb"/>
+          <Item Value="Sfzh"/>
+          <Item Value="Ykt"/>
+          <Item Value="Mm"/>
+          <Item Value="Csrq"/>
+          <Item Value="Xx"/>
+          <Item Value="Nf"/>
+          <Item Value="Zslb"/>
+          <Item Value="Xppath"/>
+          <Item Value="Sfyj"/>
+          <Item Value="Kslb"/>
+          <Item Value="Hkxz"/>
+          <Item Value="Sfhp"/>
+          <Item Value="Byzx"/>
+          <Item Value="Lxdh"/>
+          <Item Value="Jtdh"/>
+          <Item Value="Jtdz"/>
+          <Item Value="Yzbm"/>
+          <Item Value="Dzyx"/>
+          <Item Value="Jkzk"/>
+          <Item Value="Fzjl"/>
+          <Item Value="Bkyy"/>
+          <Item Value="Rxsj"/>
+          <Item Value="Bysj"/>
+          <Item Value="Xh"/>
+          <Item Value="Bj"/>
+          <Item Value="Cjsj"/>
+          <Item Value="Xgsj"/>
+          <Item Value="Xydm"/>
+          <Item Value="Xqdm"/>
+          <Item Value="Fdyxm"/>
+          <Item Value="Fdygh"/>
+          <Item Value="Xjzt"/>
+          <Item Value="Zszt"/>
+          <Item Value="Sfydr"/>
+          <Item Value="Sfytb"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xsid">
+      <AttrNames>
+        <Item Value="Xsid"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Bjdm" id="Bjdm" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Xydm" id="Xydm" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Xb" id="Xb" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Bdzy" id="Bdzy" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Kl">
+      <AttrNames>
+        <Item Value="Bj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Syd">
+      <AttrNames>
+        <Item Value="Lqzy"/>
+      </AttrNames>
+    </attributeValues>
+    <action id="Commit" DataControl="StudentAdminAMDataControl"
+            RequiresUpdateModel="true" Action="commitTransaction"/>
+    <action id="Rollback" DataControl="StudentAdminAMDataControl"
+            RequiresUpdateModel="false" Action="rollbackTransaction"/>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xm">
+      <AttrNames>
+        <Item Value="Xm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Lqzy">
+      <AttrNames>
+        <Item Value="Lqzy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Bj">
+      <AttrNames>
+        <Item Value="Bj"/>
+      </AttrNames>
+    </attributeValues>
+  </bindings>
+</pageDefinition>

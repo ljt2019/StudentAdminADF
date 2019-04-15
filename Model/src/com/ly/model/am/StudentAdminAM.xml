@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="StudentAdminAM"
+  Version="11.1.1.66.73"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true"
+  ComponentClass="com.ly.model.am.StudentAdminAMImpl">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="DmjBjxxView1"
+    ViewObjectName="com.ly.model.vo.DmjBjxxView"/>
+  <ViewUsage
+    Name="DmjYxxxView1"
+    ViewObjectName="com.ly.model.vo.DmjYxxxView"/>
+  <ViewUsage
+    Name="DmjZyxxView1"
+    ViewObjectName="com.ly.model.vo.DmjZyxxView"/>
+  <ViewUsage
+    Name="XsxxglXsjbxxView1"
+    ViewObjectName="com.ly.model.vo.XsxxglXsjbxxView"/>
+  <ViewUsage
+    Name="GengerStatisLov1"
+    ViewObjectName="com.ly.model.vo.lov.GengerStatisLov"/>
+</AppModule>

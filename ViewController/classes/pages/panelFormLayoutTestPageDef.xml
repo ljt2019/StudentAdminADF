@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.66.73" id="panelFormLayoutTestPageDef"
+                Package="pages">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="XsxxglXsjbxxView1" RangeSize="25"
+              DataControl="StudentAdminAMDataControl"
+              id="XsxxglXsjbxxView1Iterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xsid">
+      <AttrNames>
+        <Item Value="Xsid"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Bjdm" id="Bjdm" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Zzmm">
+      <AttrNames>
+        <Item Value="Zzmm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Byzxdq">
+      <AttrNames>
+        <Item Value="Byzxdq"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Bdzy" id="Bdzy" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Kl">
+      <AttrNames>
+        <Item Value="Kl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Syd">
+      <AttrNames>
+        <Item Value="Syd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Jg">
+      <AttrNames>
+        <Item Value="Jg"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Hkszd">
+      <AttrNames>
+        <Item Value="Hkszd"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Mz">
+      <AttrNames>
+        <Item Value="Mz"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Lqzy">
+      <AttrNames>
+        <Item Value="Lqzy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Ksh">
+      <AttrNames>
+        <Item Value="Ksh"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xm">
+      <AttrNames>
+        <Item Value="Xm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xmpy">
+      <AttrNames>
+        <Item Value="Xmpy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Cym">
+      <AttrNames>
+        <Item Value="Cym"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Xb" id="Xb" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Sfzh">
+      <AttrNames>
+        <Item Value="Sfzh"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Ykt">
+      <AttrNames>
+        <Item Value="Ykt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Mm">
+      <AttrNames>
+        <Item Value="Mm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Csrq">
+      <AttrNames>
+        <Item Value="Csrq"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xx">
+      <AttrNames>
+        <Item Value="Xx"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Nf">
+      <AttrNames>
+        <Item Value="Nf"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Zslb">
+      <AttrNames>
+        <Item Value="Zslb"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xppath">
+      <AttrNames>
+        <Item Value="Xppath"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Sfyj">
+      <AttrNames>
+        <Item Value="Sfyj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Kslb">
+      <AttrNames>
+        <Item Value="Kslb"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Hkxz">
+      <AttrNames>
+        <Item Value="Hkxz"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Sfhp">
+      <AttrNames>
+        <Item Value="Sfhp"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Byzx">
+      <AttrNames>
+        <Item Value="Byzx"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Lxdh">
+      <AttrNames>
+        <Item Value="Lxdh"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Jtdh">
+      <AttrNames>
+        <Item Value="Jtdh"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Jtdz">
+      <AttrNames>
+        <Item Value="Jtdz"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Yzbm">
+      <AttrNames>
+        <Item Value="Yzbm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Dzyx">
+      <AttrNames>
+        <Item Value="Dzyx"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Jkzk">
+      <AttrNames>
+        <Item Value="Jkzk"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Fzjl">
+      <AttrNames>
+        <Item Value="Fzjl"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Bkyy">
+      <AttrNames>
+        <Item Value="Bkyy"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Rxsj">
+      <AttrNames>
+        <Item Value="Rxsj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Bysj">
+      <AttrNames>
+        <Item Value="Bysj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xh">
+      <AttrNames>
+        <Item Value="Xh"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Bj">
+      <AttrNames>
+        <Item Value="Bj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Cjsj">
+      <AttrNames>
+        <Item Value="Cjsj"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xgsj">
+      <AttrNames>
+        <Item Value="Xgsj"/>
+      </AttrNames>
+    </attributeValues>
+    <list IterBinding="XsxxglXsjbxxView1Iterator" StaticList="false"
+          Uses="LOV_Xydm" id="Xydm" DTSupportsMRU="false"
+          SelectItemValueMode="ListObject"/>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xqdm">
+      <AttrNames>
+        <Item Value="Xqdm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Fdyxm">
+      <AttrNames>
+        <Item Value="Fdyxm"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Fdygh">
+      <AttrNames>
+        <Item Value="Fdygh"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Xjzt">
+      <AttrNames>
+        <Item Value="Xjzt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Zszt">
+      <AttrNames>
+        <Item Value="Zszt"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Sfydr">
+      <AttrNames>
+        <Item Value="Sfydr"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="XsxxglXsjbxxView1Iterator" id="Sfytb">
+      <AttrNames>
+        <Item Value="Sfytb"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="XsxxglXsjbxxView1Iterator" id="First"
+            RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="XsxxglXsjbxxView1Iterator" id="Previous"
+            RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="XsxxglXsjbxxView1Iterator" id="Next"
+            RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="XsxxglXsjbxxView1Iterator" id="Last"
+            RequiresUpdateModel="true" Action="last"/>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,875 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelGroupLayout id="pgl1">
+    <af:panelGroupLayout layout="vertical" id="pgl2">
+      <af:query id="qryId1" headerText="查询" disclosed="true"
+                value="#{bindings.XsxxglXsjbxxViewCriteriaQuery.queryDescriptor}"
+                model="#{bindings.XsxxglXsjbxxViewCriteriaQuery.queryModel}"
+                queryListener="#{bindings.XsxxglXsjbxxViewCriteriaQuery.processQuery}"
+                queryOperationListener="#{bindings.XsxxglXsjbxxViewCriteriaQuery.processQueryOperation}"
+                resultComponentId="::pc1:t1" rows="1" maxColumns="6"
+                saveQueryMode="hidden" modeChangeVisible="false"/>
+    </af:panelGroupLayout>
+    <af:panelCollection id="pc1" styleClass="AFStretchWidth">
+      <f:facet name="menus"/>
+      <f:facet name="toolbar">
+        <af:toolbar id="t2">
+          <af:commandToolbarButton text="新增" id="ctb1"
+                                   action="#{StudentBean.showPopup}"/>
+          <af:commandToolbarButton text="编辑" id="ctb2">
+            <af:showPopupBehavior popupId="::p1" triggerType="action"/>
+          </af:commandToolbarButton>
+          <af:commandToolbarButton text="删除" id="ctb3"
+                                   action="#{StudentBean.deleteStudent}"/>
+          <af:commandToolbarButton text="测试条件查询" id="ctb4"
+                                   action="#{StudentBean.criteria}"/>
+          <af:commandToolbarButton text="获取AM" id="ctb5"
+                                   action="#{StudentBean.getAM}"/>
+          <af:commandToolbarButton text="更换查询条件1" id="ctb6"
+                                   action="#{StudentBean.changeCriteriaFirst}"/>
+        </af:toolbar>
+      </f:facet>
+      <af:table value="#{bindings.XsxxglXsjbxxView1.collectionModel}" var="row"
+                rows="#{bindings.XsxxglXsjbxxView1.rangeSize}"
+                emptyText="#{bindings.XsxxglXsjbxxView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                fetchSize="#{bindings.XsxxglXsjbxxView1.rangeSize}"
+                rowBandingInterval="0"
+                selectedRowKeys="#{bindings.XsxxglXsjbxxView1.collectionModel.selectedRow}"
+                selectionListener="#{bindings.XsxxglXsjbxxView1.collectionModel.makeCurrent}"
+                rowSelection="single" id="t1" autoHeightRows="20"
+                scrollPolicy="page">
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xsid.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xsid.label}"
+                   id="c31">
+          <af:inputText value="#{row.bindings.Xsid.inputValue}" readOnly="true"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xsid.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xsid.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xsid.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xsid.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xsid.tooltip}"
+                        id="it22">
+            <f:validator binding="#{row.bindings.Xsid.validator}"/>
+          </af:inputText>
+        </af:column>
+        <!--学院
+       -->
+        <af:column headerText="#{bindings.XsxxglXsjbxxView1.hints.Xydm.label}"
+                   id="c52">
+          <af:selectOneChoice value="#{row.bindings.Xydm.inputValue}"
+                              label="#{row.bindings.Xydm.label}"
+                              required="#{bindings.XsxxglXsjbxxView1.hints.Xydm.mandatory}"
+                              shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xydm.tooltip}"
+                              id="soc2">
+            <f:selectItems value="#{row.bindings.Xydm.items}" id="si2"/>
+          </af:selectOneChoice>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xydm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xydm.label}"
+                   id="c30">
+          <af:inputText value="#{row.bindings.Xydm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xydm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xydm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xydm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xydm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xydm.tooltip}"
+                        id="it44">
+            <f:validator binding="#{row.bindings.Xydm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <!--专业
+      -->
+        <af:column headerText="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.label}"
+                   id="c54">
+          <af:selectOneChoice value="#{row.bindings.Bdzy.inputValue}"
+                              label="#{row.bindings.Bdzy.label}"
+                              required="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.mandatory}"
+                              shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.tooltip}"
+                              id="soc4">
+            <f:selectItems value="#{row.bindings.Bdzy.items}" id="si4"/>
+          </af:selectOneChoice>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.label}"
+                   id="c36">
+          <af:inputText value="#{row.bindings.Bdzy.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bdzy.tooltip}"
+                        id="it3">
+            <f:validator binding="#{row.bindings.Bdzy.validator}"/>
+          </af:inputText>
+        </af:column>
+        <!--班级
+      -->
+        <af:column headerText="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.label}"
+                   id="c53">
+          <af:selectOneChoice value="#{row.bindings.Bjdm.inputValue}"
+                              label="#{row.bindings.Bjdm.label}"
+                              required="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.mandatory}"
+                              shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.tooltip}"
+                              id="soc3">
+            <f:selectItems value="#{row.bindings.Bjdm.items}" id="si3"/>
+          </af:selectOneChoice>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.label}"
+                   id="c10">
+          <af:inputText value="#{row.bindings.Bjdm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bjdm.tooltip}"
+                        id="it13">
+            <f:validator binding="#{row.bindings.Bjdm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.label}"
+                   id="c15">
+          <af:inputText value="#{row.bindings.Zzmm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Zzmm.tooltip}"
+                        id="it28">
+            <f:validator binding="#{row.bindings.Zzmm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.label}"
+                   id="c20">
+          <af:inputText value="#{row.bindings.Byzxdq.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Byzxdq.tooltip}"
+                        id="it45">
+            <f:validator binding="#{row.bindings.Byzxdq.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Kl.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Kl.label}"
+                   id="c22">
+          <af:inputText value="#{row.bindings.Kl.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Kl.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Kl.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Kl.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Kl.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Kl.tooltip}"
+                        id="it11">
+            <f:validator binding="#{row.bindings.Kl.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Syd.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Syd.label}"
+                   id="c45">
+          <af:inputText value="#{row.bindings.Syd.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Syd.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Syd.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Syd.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Syd.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Syd.tooltip}"
+                        id="it6">
+            <f:validator binding="#{row.bindings.Syd.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Jg.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Jg.label}"
+                   id="c43">
+          <af:inputText value="#{row.bindings.Jg.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Jg.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Jg.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Jg.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Jg.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Jg.tooltip}"
+                        id="it32">
+            <f:validator binding="#{row.bindings.Jg.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.label}"
+                   id="c28">
+          <af:inputText value="#{row.bindings.Hkszd.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Hkszd.tooltip}"
+                        id="it9">
+            <f:validator binding="#{row.bindings.Hkszd.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Mz.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Mz.label}"
+                   id="c29">
+          <af:inputText value="#{row.bindings.Mz.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Mz.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Mz.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Mz.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Mz.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Mz.tooltip}"
+                        id="it29">
+            <f:validator binding="#{row.bindings.Mz.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.label}"
+                   id="c34">
+          <af:inputText value="#{row.bindings.Lqzy.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Lqzy.tooltip}"
+                        id="it16">
+            <f:validator binding="#{row.bindings.Lqzy.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Ksh.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Ksh.label}"
+                   id="c19">
+          <af:inputText value="#{row.bindings.Ksh.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Ksh.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Ksh.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Ksh.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Ksh.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Ksh.tooltip}"
+                        id="it12">
+            <f:validator binding="#{row.bindings.Ksh.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xm.label}"
+                   id="c9">
+          <af:inputText value="#{row.bindings.Xm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xm.tooltip}"
+                        id="it21">
+            <f:validator binding="#{row.bindings.Xm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.label}"
+                   id="c50">
+          <af:inputText value="#{row.bindings.Xmpy.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xmpy.tooltip}"
+                        id="it38">
+            <f:validator binding="#{row.bindings.Xmpy.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Cym.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Cym.label}"
+                   id="c26">
+          <af:inputText value="#{row.bindings.Cym.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Cym.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Cym.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Cym.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Cym.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Cym.tooltip}"
+                        id="it24">
+            <f:validator binding="#{row.bindings.Cym.validator}"/>
+          </af:inputText>
+        </af:column>
+        <!--<af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xb.name}"
+                 sortable="true"
+                 headerText="#{bindings.XsxxglXsjbxxView1.hints.Xb.label}"
+                 id="c2">
+        <af:inputText value="#{row.bindings.Xb.inputValue}"
+                      label="#{bindings.XsxxglXsjbxxView1.hints.Xb.label}"
+                      required="#{bindings.XsxxglXsjbxxView1.hints.Xb.mandatory}"
+                      columns="#{bindings.XsxxglXsjbxxView1.hints.Xb.displayWidth}"
+                      maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xb.precision}"
+                      shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xb.tooltip}"
+                      id="it20">
+          <f:validator binding="#{row.bindings.Xb.validator}"/>
+        </af:inputText>
+      </af:column>-->
+        <af:column headerText="#{bindings.XsxxglXsjbxxView1.hints.Xb.label}"
+                   id="c2">
+          <af:selectOneChoice value="#{row.bindings.Xb.inputValue}"
+                              label="#{row.bindings.Xb.label}"
+                              required="#{bindings.XsxxglXsjbxxView1.hints.Xb.mandatory}"
+                              shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xb.tooltip}"
+                              id="soc1">
+            <f:selectItems value="#{row.bindings.Xb.items}" id="si1"/>
+          </af:selectOneChoice>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.label}"
+                   id="c16">
+          <af:inputText value="#{row.bindings.Sfzh.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Sfzh.tooltip}"
+                        id="it33">
+            <f:validator binding="#{row.bindings.Sfzh.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Ykt.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Ykt.label}"
+                   id="c44">
+          <af:inputText value="#{row.bindings.Ykt.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Ykt.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Ykt.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Ykt.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Ykt.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Ykt.tooltip}"
+                        id="it23">
+            <f:validator binding="#{row.bindings.Ykt.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Mm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Mm.label}"
+                   id="c37">
+          <af:inputText value="#{row.bindings.Mm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Mm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Mm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Mm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Mm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Mm.tooltip}"
+                        id="it49">
+            <f:validator binding="#{row.bindings.Mm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Csrq.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Csrq.label}"
+                   id="c46">
+          <af:inputText value="#{row.bindings.Csrq.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Csrq.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Csrq.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Csrq.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Csrq.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Csrq.tooltip}"
+                        id="it40">
+            <f:validator binding="#{row.bindings.Csrq.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xx.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xx.label}"
+                   id="c11">
+          <af:inputText value="#{row.bindings.Xx.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xx.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xx.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xx.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xx.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xx.tooltip}"
+                        id="it27">
+            <f:validator binding="#{row.bindings.Xx.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Nf.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Nf.label}"
+                   id="c6">
+          <af:inputText value="#{row.bindings.Nf.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Nf.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Nf.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Nf.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Nf.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Nf.tooltip}"
+                        id="it48">
+            <f:validator binding="#{row.bindings.Nf.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Zslb.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Zslb.label}"
+                   id="c27">
+          <af:inputText value="#{row.bindings.Zslb.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Zslb.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Zslb.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Zslb.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Zslb.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Zslb.tooltip}"
+                        id="it47">
+            <f:validator binding="#{row.bindings.Zslb.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xppath.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xppath.label}"
+                   id="c12">
+          <af:inputText value="#{row.bindings.Xppath.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xppath.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xppath.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xppath.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xppath.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xppath.tooltip}"
+                        id="it25">
+            <f:validator binding="#{row.bindings.Xppath.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.label}"
+                   id="c32">
+          <af:inputText value="#{row.bindings.Sfyj.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Sfyj.tooltip}"
+                        id="it8">
+            <f:validator binding="#{row.bindings.Sfyj.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Kslb.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Kslb.label}"
+                   id="c7">
+          <af:inputText value="#{row.bindings.Kslb.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Kslb.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Kslb.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Kslb.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Kslb.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Kslb.tooltip}"
+                        id="it7">
+            <f:validator binding="#{row.bindings.Kslb.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.label}"
+                   id="c4">
+          <af:inputText value="#{row.bindings.Hkxz.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Hkxz.tooltip}"
+                        id="it39">
+            <f:validator binding="#{row.bindings.Hkxz.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.label}"
+                   id="c39">
+          <af:inputText value="#{row.bindings.Sfhp.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Sfhp.tooltip}"
+                        id="it31">
+            <f:validator binding="#{row.bindings.Sfhp.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Byzx.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Byzx.label}"
+                   id="c14">
+          <af:inputText value="#{row.bindings.Byzx.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Byzx.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Byzx.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Byzx.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Byzx.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Byzx.tooltip}"
+                        id="it41">
+            <f:validator binding="#{row.bindings.Byzx.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.label}"
+                   id="c18">
+          <af:inputText value="#{row.bindings.Lxdh.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Lxdh.tooltip}"
+                        id="it42">
+            <f:validator binding="#{row.bindings.Lxdh.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.label}"
+                   id="c47">
+          <af:inputText value="#{row.bindings.Jtdh.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Jtdh.tooltip}"
+                        id="it4">
+            <f:validator binding="#{row.bindings.Jtdh.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.label}"
+                   id="c49">
+          <af:inputText value="#{row.bindings.Jtdz.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Jtdz.tooltip}"
+                        id="it34">
+            <f:validator binding="#{row.bindings.Jtdz.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.label}"
+                   id="c21">
+          <af:inputText value="#{row.bindings.Yzbm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Yzbm.tooltip}"
+                        id="it37">
+            <f:validator binding="#{row.bindings.Yzbm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.label}"
+                   id="c24">
+          <af:inputText value="#{row.bindings.Dzyx.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Dzyx.tooltip}"
+                        id="it14">
+            <f:validator binding="#{row.bindings.Dzyx.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.label}"
+                   id="c5">
+          <af:inputText value="#{row.bindings.Jkzk.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Jkzk.tooltip}"
+                        id="it15">
+            <f:validator binding="#{row.bindings.Jkzk.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.label}"
+                   id="c13">
+          <af:inputText value="#{row.bindings.Fzjl.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Fzjl.tooltip}"
+                        id="it46">
+            <f:validator binding="#{row.bindings.Fzjl.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.label}"
+                   id="c33">
+          <af:inputText value="#{row.bindings.Bkyy.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bkyy.tooltip}"
+                        id="it1">
+            <f:validator binding="#{row.bindings.Bkyy.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.label}"
+                   id="c38">
+          <af:inputText value="#{row.bindings.Rxsj.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Rxsj.tooltip}"
+                        id="it2">
+            <f:validator binding="#{row.bindings.Rxsj.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Bysj.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Bysj.label}"
+                   id="c51">
+          <af:inputText value="#{row.bindings.Bysj.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Bysj.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Bysj.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Bysj.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Bysj.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bysj.tooltip}"
+                        id="it26">
+            <f:validator binding="#{row.bindings.Bysj.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xh.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xh.label}"
+                   id="c1">
+          <af:inputText value="#{row.bindings.Xh.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xh.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xh.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xh.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xh.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xh.tooltip}"
+                        id="it36">
+            <f:validator binding="#{row.bindings.Xh.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Bj.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Bj.label}"
+                   id="c42">
+          <af:inputText value="#{row.bindings.Bj.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Bj.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Bj.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Bj.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Bj.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Bj.tooltip}"
+                        id="it19">
+            <f:validator binding="#{row.bindings.Bj.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Cjsj.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Cjsj.label}"
+                   id="c23">
+          <af:inputDate value="#{row.bindings.Cjsj.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Cjsj.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Cjsj.mandatory}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Cjsj.tooltip}"
+                        id="id1">
+            <f:validator binding="#{row.bindings.Cjsj.validator}"/>
+            <af:convertDateTime pattern="#{bindings.XsxxglXsjbxxView1.hints.Cjsj.format}"/>
+          </af:inputDate>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xgsj.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xgsj.label}"
+                   id="c17">
+          <af:inputDate value="#{row.bindings.Xgsj.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xgsj.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xgsj.mandatory}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xgsj.tooltip}"
+                        id="id2">
+            <f:validator binding="#{row.bindings.Xgsj.validator}"/>
+            <af:convertDateTime pattern="#{bindings.XsxxglXsjbxxView1.hints.Xgsj.format}"/>
+          </af:inputDate>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.label}"
+                   id="c35">
+          <af:inputText value="#{row.bindings.Xqdm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xqdm.tooltip}"
+                        id="it35">
+            <f:validator binding="#{row.bindings.Xqdm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.label}"
+                   id="c25">
+          <af:inputText value="#{row.bindings.Fdyxm.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Fdyxm.tooltip}"
+                        id="it17">
+            <f:validator binding="#{row.bindings.Fdyxm.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.label}"
+                   id="c48">
+          <af:inputText value="#{row.bindings.Fdygh.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Fdygh.tooltip}"
+                        id="it43">
+            <f:validator binding="#{row.bindings.Fdygh.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.label}"
+                   id="c41">
+          <af:inputText value="#{row.bindings.Xjzt.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Xjzt.tooltip}"
+                        id="it30">
+            <f:validator binding="#{row.bindings.Xjzt.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Zszt.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Zszt.label}"
+                   id="c8">
+          <af:inputText value="#{row.bindings.Zszt.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Zszt.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Zszt.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Zszt.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Zszt.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Zszt.tooltip}"
+                        id="it18">
+            <f:validator binding="#{row.bindings.Zszt.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.label}"
+                   id="c40">
+          <af:inputText value="#{row.bindings.Sfydr.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Sfydr.tooltip}"
+                        id="it10">
+            <f:validator binding="#{row.bindings.Sfydr.validator}"/>
+          </af:inputText>
+        </af:column>
+        <af:column sortProperty="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.name}"
+                   sortable="true"
+                   headerText="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.label}"
+                   id="c3">
+          <af:inputText value="#{row.bindings.Sfytb.inputValue}"
+                        label="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.label}"
+                        required="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.mandatory}"
+                        columns="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.displayWidth}"
+                        maximumLength="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.precision}"
+                        shortDesc="#{bindings.XsxxglXsjbxxView1.hints.Sfytb.tooltip}"
+                        id="it5">
+            <f:validator binding="#{row.bindings.Sfytb.validator}"/>
+          </af:inputText>
+        </af:column>
+      </af:table>
+      <f:facet name="statusbar"/>
+    </af:panelCollection>
+    <!--弹窗.弹出框不使用缓存，添加延时加载 contentDelivery="lazyUncached" childCreation="deferred"
+    -->
+    <af:popup id="p1" popupCanceledListener="#{StudentBean.cancel}"
+              contentDelivery="lazyUncached" childCreation="deferred">
+      <af:dialog id="d1" dialogListener="#{StudentBean.addStudent}" resize="on"
+                 title="添加或修改" type="okCancel" closeIconVisible="true">
+        <!--表单布局组件，展现table中的一条数据 -->
+        <af:panelFormLayout id="pfl1">
+          <af:inputText value="#{bindings.Xsid.inputValue}"
+                        label="#{bindings.Xsid.hints.label}"
+                        required="#{bindings.Xsid.hints.mandatory}"
+                        columns="#{bindings.Xsid.hints.displayWidth}"
+                        maximumLength="#{bindings.Xsid.hints.precision}"
+                        shortDesc="#{bindings.Xsid.hints.tooltip}" id="it50">
+            <f:validator binding="#{bindings.Xsid.validator}"/>
+          </af:inputText>
+          <af:selectOneChoice value="#{bindings.Xydm.inputValue}"
+                              autoSubmit="true" label="#{bindings.Xydm.label}"
+                              shortDesc="#{bindings.Xydm.hints.tooltip}"
+                              id="soc8">
+            <f:selectItems value="#{bindings.Xydm.items}" id="si5"/>
+          </af:selectOneChoice>
+          <af:selectOneChoice value="#{bindings.Bdzy.inputValue}"
+                              autoSubmit="true" label="#{bindings.Bdzy.label}"
+                              partialTriggers="soc8"
+                              shortDesc="#{bindings.Bdzy.hints.tooltip}"
+                              id="soc5">
+            <f:selectItems value="#{bindings.Bdzy.items}" id="si6"/>
+          </af:selectOneChoice>
+          <af:selectOneChoice value="#{bindings.Bjdm.inputValue}"
+                              label="#{bindings.Bjdm.label}"
+                              partialTriggers="soc5"
+                              shortDesc="#{bindings.Bjdm.hints.tooltip}"
+                              id="soc7">
+            <f:selectItems value="#{bindings.Bjdm.items}" id="si8"/>
+          </af:selectOneChoice>
+          <af:inputText value="#{bindings.Xm.inputValue}"
+                        label="#{bindings.Xm.hints.label}"
+                        required="#{bindings.Xm.hints.mandatory}"
+                        columns="#{bindings.Xm.hints.displayWidth}"
+                        maximumLength="#{bindings.Xm.hints.precision}"
+                        shortDesc="#{bindings.Xm.hints.tooltip}" id="it20">
+            <f:validator binding="#{bindings.Xm.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Kl.inputValue}"
+                        label="#{bindings.Kl.hints.label}"
+                        required="#{bindings.Kl.hints.mandatory}"
+                        columns="#{bindings.Kl.hints.displayWidth}"
+                        maximumLength="#{bindings.Kl.hints.precision}"
+                        shortDesc="#{bindings.Kl.hints.tooltip}" id="it51">
+            <f:validator binding="#{bindings.Kl.validator}"/>
+          </af:inputText>
+          <af:inputText value="#{bindings.Syd.inputValue}"
+                        label="#{bindings.Syd.hints.label}"
+                        required="#{bindings.Syd.hints.mandatory}"
+                        columns="#{bindings.Syd.hints.displayWidth}"
+                        maximumLength="#{bindings.Syd.hints.precision}"
+                        shortDesc="#{bindings.Syd.hints.tooltip}" id="it52">
+            <f:validator binding="#{bindings.Syd.validator}"/>
+          </af:inputText>
+          <af:selectOneChoice value="#{bindings.Xb.inputValue}"
+                              label="#{bindings.Xb.label}"
+                              required="#{bindings.Xb.hints.mandatory}"
+                              shortDesc="#{bindings.Xb.hints.tooltip}"
+                              id="soc6">
+            <f:selectItems value="#{bindings.Xb.items}" id="si7"/>
+          </af:selectOneChoice>
+        </af:panelFormLayout>
+      </af:dialog>
+    </af:popup>
+  </af:panelGroupLayout>
+</jsp:root>

@@ -1,0 +1,425 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+  <af:panelFormLayout id="pfl1" rows="14" maxColumns="2">
+    <af:inputText value="#{bindings.Xsid.inputValue}"
+                  label="#{bindings.Xsid.hints.label}"
+                  required="#{bindings.Xsid.hints.mandatory}"
+                  columns="#{bindings.Xsid.hints.displayWidth}"
+                  maximumLength="#{bindings.Xsid.hints.precision}"
+                  shortDesc="#{bindings.Xsid.hints.tooltip}" id="it39">
+      <f:validator binding="#{bindings.Xsid.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Zzmm.inputValue}"
+                  label="#{bindings.Zzmm.hints.label}"
+                  required="#{bindings.Zzmm.hints.mandatory}"
+                  columns="#{bindings.Zzmm.hints.displayWidth}"
+                  maximumLength="#{bindings.Zzmm.hints.precision}"
+                  shortDesc="#{bindings.Zzmm.hints.tooltip}" id="it33">
+      <f:validator binding="#{bindings.Zzmm.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Byzxdq.inputValue}"
+                  label="#{bindings.Byzxdq.hints.label}"
+                  required="#{bindings.Byzxdq.hints.mandatory}"
+                  columns="#{bindings.Byzxdq.hints.displayWidth}"
+                  maximumLength="#{bindings.Byzxdq.hints.precision}"
+                  shortDesc="#{bindings.Byzxdq.hints.tooltip}" id="it2">
+      <f:validator binding="#{bindings.Byzxdq.validator}"/>
+    </af:inputText>
+    <af:selectOneChoice value="#{bindings.Xydm.inputValue}" autoSubmit="true"
+                        label="#{bindings.Xydm.label}"
+                       
+                        shortDesc="#{bindings.Xydm.hints.tooltip}" id="soc2">
+      <f:selectItems value="#{bindings.Xydm.items}" id="si1"/>
+    </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Bdzy.inputValue}" autoSubmit="true"
+                        label="#{bindings.Bdzy.label}" partialTriggers="soc2"
+                       
+                        shortDesc="#{bindings.Bdzy.hints.tooltip}" id="soc4">
+      <f:selectItems value="#{bindings.Bdzy.items}" id="si2"/>
+    </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Bjdm.inputValue}" partialTriggers="soc4"
+                        label="#{bindings.Bjdm.label}"
+                       
+                        shortDesc="#{bindings.Bjdm.hints.tooltip}" id="soc3">
+      <f:selectItems value="#{bindings.Bjdm.items}" id="si3"/>
+    </af:selectOneChoice>
+    <af:selectOneChoice value="#{bindings.Xb.inputValue}"
+                        label="#{bindings.Xb.label}"
+                        required="#{bindings.Xb.hints.mandatory}"
+                        shortDesc="#{bindings.Xb.hints.tooltip}" id="soc1">
+      <f:selectItems value="#{bindings.Xb.items}" id="si4"/>
+    </af:selectOneChoice>
+    <af:inputText value="#{bindings.Kl.inputValue}"
+                  label="#{bindings.Kl.hints.label}"
+                  required="#{bindings.Kl.hints.mandatory}"
+                  columns="#{bindings.Kl.hints.displayWidth}"
+                  maximumLength="#{bindings.Kl.hints.precision}"
+                  shortDesc="#{bindings.Kl.hints.tooltip}" id="it9">
+      <f:validator binding="#{bindings.Kl.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Syd.inputValue}"
+                  label="#{bindings.Syd.hints.label}"
+                  required="#{bindings.Syd.hints.mandatory}"
+                  columns="#{bindings.Syd.hints.displayWidth}"
+                  maximumLength="#{bindings.Syd.hints.precision}"
+                  shortDesc="#{bindings.Syd.hints.tooltip}" id="it10">
+      <f:validator binding="#{bindings.Syd.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Jg.inputValue}"
+                  label="#{bindings.Jg.hints.label}"
+                  required="#{bindings.Jg.hints.mandatory}"
+                  columns="#{bindings.Jg.hints.displayWidth}"
+                  maximumLength="#{bindings.Jg.hints.precision}"
+                  shortDesc="#{bindings.Jg.hints.tooltip}" id="it7">
+      <f:validator binding="#{bindings.Jg.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Hkszd.inputValue}"
+                  label="#{bindings.Hkszd.hints.label}"
+                  required="#{bindings.Hkszd.hints.mandatory}"
+                  columns="#{bindings.Hkszd.hints.displayWidth}"
+                  maximumLength="#{bindings.Hkszd.hints.precision}"
+                  shortDesc="#{bindings.Hkszd.hints.tooltip}" id="it30">
+      <f:validator binding="#{bindings.Hkszd.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Mz.inputValue}"
+                  label="#{bindings.Mz.hints.label}"
+                  required="#{bindings.Mz.hints.mandatory}"
+                  columns="#{bindings.Mz.hints.displayWidth}"
+                  maximumLength="#{bindings.Mz.hints.precision}"
+                  shortDesc="#{bindings.Mz.hints.tooltip}" id="it24">
+      <f:validator binding="#{bindings.Mz.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Lqzy.inputValue}"
+                  label="#{bindings.Lqzy.hints.label}"
+                  required="#{bindings.Lqzy.hints.mandatory}"
+                  columns="#{bindings.Lqzy.hints.displayWidth}"
+                  maximumLength="#{bindings.Lqzy.hints.precision}"
+                  shortDesc="#{bindings.Lqzy.hints.tooltip}" id="it8">
+      <f:validator binding="#{bindings.Lqzy.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Ksh.inputValue}"
+                  label="#{bindings.Ksh.hints.label}"
+                  required="#{bindings.Ksh.hints.mandatory}"
+                  columns="#{bindings.Ksh.hints.displayWidth}"
+                  maximumLength="#{bindings.Ksh.hints.precision}"
+                  shortDesc="#{bindings.Ksh.hints.tooltip}" id="it25">
+      <f:validator binding="#{bindings.Ksh.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Xm.inputValue}"
+                  label="#{bindings.Xm.hints.label}"
+                  required="#{bindings.Xm.hints.mandatory}"
+                  columns="#{bindings.Xm.hints.displayWidth}"
+                  maximumLength="#{bindings.Xm.hints.precision}"
+                  shortDesc="#{bindings.Xm.hints.tooltip}" id="it16">
+      <f:validator binding="#{bindings.Xm.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Xmpy.inputValue}"
+                  label="#{bindings.Xmpy.hints.label}"
+                  required="#{bindings.Xmpy.hints.mandatory}"
+                  columns="#{bindings.Xmpy.hints.displayWidth}"
+                  maximumLength="#{bindings.Xmpy.hints.precision}"
+                  shortDesc="#{bindings.Xmpy.hints.tooltip}" id="it18">
+      <f:validator binding="#{bindings.Xmpy.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Cym.inputValue}"
+                  label="#{bindings.Cym.hints.label}"
+                  required="#{bindings.Cym.hints.mandatory}"
+                  columns="#{bindings.Cym.hints.displayWidth}"
+                  maximumLength="#{bindings.Cym.hints.precision}"
+                  shortDesc="#{bindings.Cym.hints.tooltip}" id="it40">
+      <f:validator binding="#{bindings.Cym.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Sfzh.inputValue}"
+                  label="#{bindings.Sfzh.hints.label}"
+                  required="#{bindings.Sfzh.hints.mandatory}"
+                  columns="#{bindings.Sfzh.hints.displayWidth}"
+                  maximumLength="#{bindings.Sfzh.hints.precision}"
+                  shortDesc="#{bindings.Sfzh.hints.tooltip}" id="it4">
+      <f:validator binding="#{bindings.Sfzh.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Ykt.inputValue}"
+                  label="#{bindings.Ykt.hints.label}"
+                  required="#{bindings.Ykt.hints.mandatory}"
+                  columns="#{bindings.Ykt.hints.displayWidth}"
+                  maximumLength="#{bindings.Ykt.hints.precision}"
+                  shortDesc="#{bindings.Ykt.hints.tooltip}" id="it14">
+      <f:validator binding="#{bindings.Ykt.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Mm.inputValue}"
+                  label="#{bindings.Mm.hints.label}"
+                  required="#{bindings.Mm.hints.mandatory}"
+                  columns="#{bindings.Mm.hints.displayWidth}"
+                  maximumLength="#{bindings.Mm.hints.precision}"
+                  shortDesc="#{bindings.Mm.hints.tooltip}" id="it23">
+      <f:validator binding="#{bindings.Mm.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Csrq.inputValue}"
+                  label="#{bindings.Csrq.hints.label}"
+                  required="#{bindings.Csrq.hints.mandatory}"
+                  columns="#{bindings.Csrq.hints.displayWidth}"
+                  maximumLength="#{bindings.Csrq.hints.precision}"
+                  shortDesc="#{bindings.Csrq.hints.tooltip}" id="it13">
+      <f:validator binding="#{bindings.Csrq.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Xx.inputValue}"
+                  label="#{bindings.Xx.hints.label}"
+                  required="#{bindings.Xx.hints.mandatory}"
+                  columns="#{bindings.Xx.hints.displayWidth}"
+                  maximumLength="#{bindings.Xx.hints.precision}"
+                  shortDesc="#{bindings.Xx.hints.tooltip}" id="it22">
+      <f:validator binding="#{bindings.Xx.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Nf.inputValue}"
+                  label="#{bindings.Nf.hints.label}"
+                  required="#{bindings.Nf.hints.mandatory}"
+                  columns="#{bindings.Nf.hints.displayWidth}"
+                  maximumLength="#{bindings.Nf.hints.precision}"
+                  shortDesc="#{bindings.Nf.hints.tooltip}" id="it38">
+      <f:validator binding="#{bindings.Nf.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Zslb.inputValue}"
+                  label="#{bindings.Zslb.hints.label}"
+                  required="#{bindings.Zslb.hints.mandatory}"
+                  columns="#{bindings.Zslb.hints.displayWidth}"
+                  maximumLength="#{bindings.Zslb.hints.precision}"
+                  shortDesc="#{bindings.Zslb.hints.tooltip}" id="it21">
+      <f:validator binding="#{bindings.Zslb.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Xppath.inputValue}"
+                  label="#{bindings.Xppath.hints.label}"
+                  required="#{bindings.Xppath.hints.mandatory}"
+                  columns="#{bindings.Xppath.hints.displayWidth}"
+                  maximumLength="#{bindings.Xppath.hints.precision}"
+                  shortDesc="#{bindings.Xppath.hints.tooltip}" id="it43">
+      <f:validator binding="#{bindings.Xppath.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Sfyj.inputValue}"
+                  label="#{bindings.Sfyj.hints.label}"
+                  required="#{bindings.Sfyj.hints.mandatory}"
+                  columns="#{bindings.Sfyj.hints.displayWidth}"
+                  maximumLength="#{bindings.Sfyj.hints.precision}"
+                  shortDesc="#{bindings.Sfyj.hints.tooltip}" id="it36">
+      <f:validator binding="#{bindings.Sfyj.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Kslb.inputValue}"
+                  label="#{bindings.Kslb.hints.label}"
+                  required="#{bindings.Kslb.hints.mandatory}"
+                  columns="#{bindings.Kslb.hints.displayWidth}"
+                  maximumLength="#{bindings.Kslb.hints.precision}"
+                  shortDesc="#{bindings.Kslb.hints.tooltip}" id="it19">
+      <f:validator binding="#{bindings.Kslb.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Hkxz.inputValue}"
+                  label="#{bindings.Hkxz.hints.label}"
+                  required="#{bindings.Hkxz.hints.mandatory}"
+                  columns="#{bindings.Hkxz.hints.displayWidth}"
+                  maximumLength="#{bindings.Hkxz.hints.precision}"
+                  shortDesc="#{bindings.Hkxz.hints.tooltip}" id="it17">
+      <f:validator binding="#{bindings.Hkxz.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Sfhp.inputValue}"
+                  label="#{bindings.Sfhp.hints.label}"
+                  required="#{bindings.Sfhp.hints.mandatory}"
+                  columns="#{bindings.Sfhp.hints.displayWidth}"
+                  maximumLength="#{bindings.Sfhp.hints.precision}"
+                  shortDesc="#{bindings.Sfhp.hints.tooltip}" id="it45">
+      <f:validator binding="#{bindings.Sfhp.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Byzx.inputValue}"
+                  label="#{bindings.Byzx.hints.label}"
+                  required="#{bindings.Byzx.hints.mandatory}"
+                  columns="#{bindings.Byzx.hints.displayWidth}"
+                  maximumLength="#{bindings.Byzx.hints.precision}"
+                  shortDesc="#{bindings.Byzx.hints.tooltip}" id="it29">
+      <f:validator binding="#{bindings.Byzx.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Lxdh.inputValue}"
+                  label="#{bindings.Lxdh.hints.label}"
+                  required="#{bindings.Lxdh.hints.mandatory}"
+                  columns="#{bindings.Lxdh.hints.displayWidth}"
+                  maximumLength="#{bindings.Lxdh.hints.precision}"
+                  shortDesc="#{bindings.Lxdh.hints.tooltip}" id="it5">
+      <f:validator binding="#{bindings.Lxdh.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Jtdh.inputValue}"
+                  label="#{bindings.Jtdh.hints.label}"
+                  required="#{bindings.Jtdh.hints.mandatory}"
+                  columns="#{bindings.Jtdh.hints.displayWidth}"
+                  maximumLength="#{bindings.Jtdh.hints.precision}"
+                  shortDesc="#{bindings.Jtdh.hints.tooltip}" id="it37">
+      <f:validator binding="#{bindings.Jtdh.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Jtdz.inputValue}"
+                  label="#{bindings.Jtdz.hints.label}"
+                  required="#{bindings.Jtdz.hints.mandatory}"
+                  columns="#{bindings.Jtdz.hints.displayWidth}"
+                  maximumLength="#{bindings.Jtdz.hints.precision}"
+                  shortDesc="#{bindings.Jtdz.hints.tooltip}" id="it34">
+      <f:validator binding="#{bindings.Jtdz.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Yzbm.inputValue}"
+                  label="#{bindings.Yzbm.hints.label}"
+                  required="#{bindings.Yzbm.hints.mandatory}"
+                  columns="#{bindings.Yzbm.hints.displayWidth}"
+                  maximumLength="#{bindings.Yzbm.hints.precision}"
+                  shortDesc="#{bindings.Yzbm.hints.tooltip}" id="it31">
+      <f:validator binding="#{bindings.Yzbm.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Dzyx.inputValue}"
+                  label="#{bindings.Dzyx.hints.label}"
+                  required="#{bindings.Dzyx.hints.mandatory}"
+                  columns="#{bindings.Dzyx.hints.displayWidth}"
+                  maximumLength="#{bindings.Dzyx.hints.precision}"
+                  shortDesc="#{bindings.Dzyx.hints.tooltip}" id="it11">
+      <f:validator binding="#{bindings.Dzyx.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Jkzk.inputValue}"
+                  label="#{bindings.Jkzk.hints.label}"
+                  required="#{bindings.Jkzk.hints.mandatory}"
+                  columns="#{bindings.Jkzk.hints.displayWidth}"
+                  maximumLength="#{bindings.Jkzk.hints.precision}"
+                  shortDesc="#{bindings.Jkzk.hints.tooltip}" id="it35">
+      <f:validator binding="#{bindings.Jkzk.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Fzjl.inputValue}"
+                  label="#{bindings.Fzjl.hints.label}"
+                  required="#{bindings.Fzjl.hints.mandatory}"
+                  columns="#{bindings.Fzjl.hints.displayWidth}"
+                  maximumLength="#{bindings.Fzjl.hints.precision}"
+                  shortDesc="#{bindings.Fzjl.hints.tooltip}" id="it42">
+      <f:validator binding="#{bindings.Fzjl.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Bkyy.inputValue}"
+                  label="#{bindings.Bkyy.hints.label}"
+                  required="#{bindings.Bkyy.hints.mandatory}"
+                  columns="#{bindings.Bkyy.hints.displayWidth}"
+                  maximumLength="#{bindings.Bkyy.hints.precision}"
+                  shortDesc="#{bindings.Bkyy.hints.tooltip}" id="it1">
+      <f:validator binding="#{bindings.Bkyy.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Rxsj.inputValue}"
+                  label="#{bindings.Rxsj.hints.label}"
+                  required="#{bindings.Rxsj.hints.mandatory}"
+                  columns="#{bindings.Rxsj.hints.displayWidth}"
+                  maximumLength="#{bindings.Rxsj.hints.precision}"
+                  shortDesc="#{bindings.Rxsj.hints.tooltip}" id="it32">
+      <f:validator binding="#{bindings.Rxsj.validator}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.Cjsj.inputValue}"
+                  label="#{bindings.Cjsj.hints.label}"
+                  required="#{bindings.Cjsj.hints.mandatory}"
+                  shortDesc="#{bindings.Cjsj.hints.tooltip}" id="id1">
+      <f:validator binding="#{bindings.Cjsj.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Cjsj.format}"/>
+    </af:inputDate>
+    <af:inputText value="#{bindings.Bysj.inputValue}"
+                  label="#{bindings.Bysj.hints.label}"
+                  required="#{bindings.Bysj.hints.mandatory}"
+                  columns="#{bindings.Bysj.hints.displayWidth}"
+                  maximumLength="#{bindings.Bysj.hints.precision}"
+                  shortDesc="#{bindings.Bysj.hints.tooltip}" id="it12">
+      <f:validator binding="#{bindings.Bysj.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Xh.inputValue}"
+                  label="#{bindings.Xh.hints.label}"
+                  required="#{bindings.Xh.hints.mandatory}"
+                  columns="#{bindings.Xh.hints.displayWidth}"
+                  maximumLength="#{bindings.Xh.hints.precision}"
+                  shortDesc="#{bindings.Xh.hints.tooltip}" id="it44">
+      <f:validator binding="#{bindings.Xh.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Bj.inputValue}"
+                  label="#{bindings.Bj.hints.label}"
+                  required="#{bindings.Bj.hints.mandatory}"
+                  columns="#{bindings.Bj.hints.displayWidth}"
+                  maximumLength="#{bindings.Bj.hints.precision}"
+                  shortDesc="#{bindings.Bj.hints.tooltip}" id="it3">
+      <f:validator binding="#{bindings.Bj.validator}"/>
+    </af:inputText>
+    <af:inputDate value="#{bindings.Xgsj.inputValue}"
+                  label="#{bindings.Xgsj.hints.label}"
+                  required="#{bindings.Xgsj.hints.mandatory}"
+                  shortDesc="#{bindings.Xgsj.hints.tooltip}" id="id2">
+      <f:validator binding="#{bindings.Xgsj.validator}"/>
+      <af:convertDateTime pattern="#{bindings.Xgsj.format}"/>
+    </af:inputDate>
+    <af:inputText value="#{bindings.Xqdm.inputValue}"
+                  label="#{bindings.Xqdm.hints.label}"
+                  required="#{bindings.Xqdm.hints.mandatory}"
+                  columns="#{bindings.Xqdm.hints.displayWidth}"
+                  maximumLength="#{bindings.Xqdm.hints.precision}"
+                  shortDesc="#{bindings.Xqdm.hints.tooltip}" id="it6">
+      <f:validator binding="#{bindings.Xqdm.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Fdyxm.inputValue}"
+                  label="#{bindings.Fdyxm.hints.label}"
+                  required="#{bindings.Fdyxm.hints.mandatory}"
+                  columns="#{bindings.Fdyxm.hints.displayWidth}"
+                  maximumLength="#{bindings.Fdyxm.hints.precision}"
+                  shortDesc="#{bindings.Fdyxm.hints.tooltip}" id="it20">
+      <f:validator binding="#{bindings.Fdyxm.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Fdygh.inputValue}"
+                  label="#{bindings.Fdygh.hints.label}"
+                  required="#{bindings.Fdygh.hints.mandatory}"
+                  columns="#{bindings.Fdygh.hints.displayWidth}"
+                  maximumLength="#{bindings.Fdygh.hints.precision}"
+                  shortDesc="#{bindings.Fdygh.hints.tooltip}" id="it15">
+      <f:validator binding="#{bindings.Fdygh.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Xjzt.inputValue}"
+                  label="#{bindings.Xjzt.hints.label}"
+                  required="#{bindings.Xjzt.hints.mandatory}"
+                  columns="#{bindings.Xjzt.hints.displayWidth}"
+                  maximumLength="#{bindings.Xjzt.hints.precision}"
+                  shortDesc="#{bindings.Xjzt.hints.tooltip}" id="it41">
+      <f:validator binding="#{bindings.Xjzt.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Zszt.inputValue}"
+                  label="#{bindings.Zszt.hints.label}"
+                  required="#{bindings.Zszt.hints.mandatory}"
+                  columns="#{bindings.Zszt.hints.displayWidth}"
+                  maximumLength="#{bindings.Zszt.hints.precision}"
+                  shortDesc="#{bindings.Zszt.hints.tooltip}" id="it27">
+      <f:validator binding="#{bindings.Zszt.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Sfydr.inputValue}"
+                  label="#{bindings.Sfydr.hints.label}"
+                  required="#{bindings.Sfydr.hints.mandatory}"
+                  columns="#{bindings.Sfydr.hints.displayWidth}"
+                  maximumLength="#{bindings.Sfydr.hints.precision}"
+                  shortDesc="#{bindings.Sfydr.hints.tooltip}" id="it26">
+      <f:validator binding="#{bindings.Sfydr.validator}"/>
+    </af:inputText>
+    <af:inputText value="#{bindings.Sfytb.inputValue}"
+                  label="#{bindings.Sfytb.hints.label}"
+                  required="#{bindings.Sfytb.hints.mandatory}"
+                  columns="#{bindings.Sfytb.hints.displayWidth}"
+                  maximumLength="#{bindings.Sfytb.hints.precision}"
+                  shortDesc="#{bindings.Sfytb.hints.tooltip}" id="it28">
+      <f:validator binding="#{bindings.Sfytb.validator}"/>
+    </af:inputText>
+    <f:facet name="footer">
+      <af:panelGroupLayout layout="vertical" id="pgl1">
+        <af:panelGroupLayout layout="horizontal" id="pgl2">
+          <af:commandButton actionListener="#{bindings.First.execute}"
+                            text="First" disabled="#{!bindings.First.enabled}"
+                            partialSubmit="true" id="cb1"/>
+          <af:commandButton actionListener="#{bindings.Previous.execute}"
+                            text="Previous"
+                            disabled="#{!bindings.Previous.enabled}"
+                            partialSubmit="true" id="cb2"/>
+          <af:commandButton actionListener="#{bindings.Next.execute}"
+                            text="Next" disabled="#{!bindings.Next.enabled}"
+                            partialSubmit="true" id="cb4"/>
+          <af:commandButton actionListener="#{bindings.Last.execute}"
+                            text="Last" disabled="#{!bindings.Last.enabled}"
+                            partialSubmit="true" id="cb5"/>
+        </af:panelGroupLayout>
+        <af:commandButton text="Submit" id="cb3"/>
+      </af:panelGroupLayout>
+    </f:facet>
+  </af:panelFormLayout>
+</jsp:root>

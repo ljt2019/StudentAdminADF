@@ -1,0 +1,5 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<task-flow-registry xmlns="http://xmlns.oracle.com/adf/controller/rc">
+   <task-flow-descriptor path="WEB-INF/taskflows/test_taskflow.xml" id="test_taskflow" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false"/>
+   <task-flow-descriptor path="WEB-INF/taskflows/studentInfo_taskflow.xml" id="studentInfo_taskflow" type="task-flow-definition" uses-page-fragments="true" library-internal="false" remote-invocable="false" train="false"/>
+</task-flow-registry>

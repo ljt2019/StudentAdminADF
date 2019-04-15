@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.66.73" id="DataBindings" SeparateXMLFiles="false"
+             Package="com.ly.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/pages/studentInfo.jsff"
+          usageId="com_ly_view_studentInfoPageDef"/>
+    <page path="/index.jspx" usageId="com_ly_view_indexPageDef"/>
+    <page path="/pages/panelFormLayoutTest.jsff"
+          usageId="com_ly_view_panelFormLayoutTestPageDef"/>
+    <page path="/test.jspx" usageId="com_ly_view_testPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_ly_view_studentInfoPageDef" path="pages.studentInfoPageDef"/>
+    <page id="com_ly_view_indexPageDef"
+          path="com.ly.view.pageDefs.indexPageDef"/>
+    <page id="com_ly_view_panelFormLayoutTestPageDef"
+          path="pages.panelFormLayoutTestPageDef"/>
+    <page id="com_ly_view_testPageDef" path="com.ly.view.pageDefs.testPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="StudentAdminAMDataControl" Package="com.ly.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true"
+                     Configuration="StudentAdminAMLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.ly.model.am.StudentAdminAM">
+      <AppModuleConfig name="16A0F31D4F6" java.naming.factory.initial="oracle.jbo.common.JboInitialContextFactory" DBconnection="java:comp/env/jdbc/student_managerDS" IsLazyLoadingTrue="true" JDBCName="student_manager" jbo.project="com.ly.model.Model" BC4JConfigName="StudentAdminAMLocal" DeployPlatform="LOCAL" ApplicationName="com.ly.model.am.StudentAdminAM">
+         <Database jbo.SQLBuilder="Oracle" jbo.TypeMapEntries="Oracle"/>
+         <Security AppModuleJndiName="com.ly.model.am.StudentAdminAM"/>
+         <Tester FullProxyInterfaceName="com.ly.model.am.common.StudentAdminAM"/>
+         <Custom LastUsedConfiguration="StudentAdminAMLocal" JDBCDataSource="java:comp/env/jdbc/student_managerDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
